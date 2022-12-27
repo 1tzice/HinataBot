@@ -1,45 +1,45 @@
 {
-    "name": "wudysoft",
-    "version": "2.4.0",
-    "description": "Free WhatsApp Bot Multi Device With ESM Module",
-    "main": "index.js",
-    "type": "module",
-    "directories": {
-        "lib": "lib",
-        "src": "src",
-        "plugins": "plugins"
-    },
-    "scripts": {
-        "start": "node index.js",
-        "test": "node test.js",
-        "test2": "nodemon index.js"
-    },
-    "keywords": [
-        "termux-whatsapp-bot",
-        "whatsapp-bot",
-        "whatsapp",
-        "js-whatsapp",
-        "whatsapp",
-        "Games-wabot",
-        "wabot-aq",
-        "multi-device",
-        "MD",
-        "baileys-md"
-    ],
-    "homepage": "https://github.com/wudysoft",
-    "author": {
-        "name": "wudysoft"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/wudysoft/HinataBot.git"
-    },
-    "bugs": {
-        "url": "https://github.com/wudysoft/HinataBot/issues"
-    },
-    "license": "GPL-3.0-or-later",
-    "dependencies": {
-        "@adiwajshing/baileys" : "github:Saipulanuar/baileys",
+  "name": "newscbot2022",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"> <img src=\"https://telegra.ph/file/6ab4daac226292a112540.jpg\" alt=\"YUKI BOT\" width=\"500\"/>",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "plugins": "plugins"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "test2": "node index.js"
+  },
+  "keywords": [
+    "termux-whatsapp-bot",
+    "whatsapp-bot",
+    "whatsapp",
+    "js-whatsapp",
+    "whatsapp",
+    "Games-wabot",
+    "wabot-aq",
+    "multi-device",
+    "MD",
+    "baileys-md"
+  ],
+  "homepage": "https://github.com/saipulanuar/RPG-MD-V5",
+  "author": {
+    "name": "Saipul Anuar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saipulanuar/RPG-MD-V5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saipulanuar/RPG-MD-V5/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys" : "github:Saipulanuar/baileys",
         "@bochilteam/scraper" : "^2.0.0",
         "@ibaraki-douji/pixivts" : "*",
         "@vitalets/google-translate-api" : "^8.0.0",
@@ -102,12 +102,12 @@
         "tiktok-scraper-ts" : "*",
         "url" : "*",
         "url-regex-safe" : "^3.0.0",
-        "wa-sticker-formatter" : "*",
+        "wa-sticker-formatter" : "^4.3.2",
         "xfarr-api" : "^1.0.3",
         "yargs" : "^17.3.1",
         "zs-extract" : "^1.4.1"
     },
     "optionalDependencies": {
-        "wa-sticker-formatter": "*"
+        "wa-sticker-formatter": "^4.3.2"
     }
 }

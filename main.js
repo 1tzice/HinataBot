@@ -26,15 +26,13 @@ import syntaxerror from 'syntax-error'
 import { tmpdir } from 'os'
 import { format } from 'util'
 import { makeWASocket, protoType, serialize } from './lib/simple.js'
-import { Low } from 'lowdb'
-import { JSONFile } from 'lowdb/node'
+import { Low, JSONFile } from 'lowdb'
 import {
   mongoDB,
   mongoDBV2
 } from './lib/mongoDB.js'
-
+import store from './lib/store-single.js'
 const {
-  useSingleFileAuthState,
   DisconnectReason
 } = (await import('@adiwajshing/baileys')).default
 
@@ -87,7 +85,7 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 global.authFile = `${opts._[0] || 'session'}.data.json`
-const { state, saveState } = useSingleFileAuthState(global.authFile)
+const { state, saveState } = store.useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
 printQRInTerminal: true,

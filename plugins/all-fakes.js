@@ -12,8 +12,6 @@ export async function before(m, { conn } ) {
 	let name = await conn.getName(who)
 	
 /* Hiasan */
-		let emo = ['🗿', '👻', '⚡', '🦅', '🎏', '🎀', '🪄', '🎊', '🎁', '🏮', '🧧', '🏷️', '📮', '📍', '🔖', '🍒', '🍫', '🐝', '🍃', '✨', '☂️', '👑', '🎗️', '🌹']
-		
 		let ini_kotak = ['⛶','❏','⫹⫺','☰','⎔','✦','⭔','⬟','⛊','⚝'].getRandom()
 		let ini_titik = ['◈','➭','ଓ','⟆•','⳻⳻','•','↬','◈▻','⭑','ᯬ','◉','᭻','»','〆','々','⛥','✗','⚜','⚚','♪'].getRandom()
 		let ini_garis = ['┅──┅','━━━','═┅┅═','––––','–━═━–','──┅──','═┅┅┅═','┈┅━┅┈','┈┄═┅═┄┈','┅══┅'].getRandom()
@@ -72,12 +70,10 @@ export async function before(m, { conn } ) {
 		let _kn = [dataa, datab, datac, datad].getRandom()
 		
 		/* Hiasan */
-		global.emojis = emo.getRandom()
 		global.dmenut = ini_atas
 		global.dmenub = ini_kiri
 		global.dmenub2 = ini_kiri
 		global.dmenuf = ini_bawah
-		global.cmenuh = ini_kanan
 		global.cmenub = ini_kiri
 		global.cmenuf = ini_bawah
 		global.pmenus = ini_titik

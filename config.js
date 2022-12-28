@@ -43,7 +43,7 @@ global.APIs = {
 /*Apikey*/
 global.APIKeys = {
  'https://api.neoxr.my.id' : '5VC9rvNx',
- 'https://api.lolhuman.xyz' : 'ed78c137a46873c5b8e5fe3b',
+ 'https://api.lolhuman.xyz' : '327a6596e4c4baa20c756132',
  'https://api.xteam.xyz' : 'HIRO',
  'https://api.zeks.xyz' : 'apivinz',
  'https://hardianto-chan.herokuapp.com' : 'hardianto',
@@ -60,7 +60,7 @@ global.APIKeys = {
 }
 
 /*Lolhuman*/
-global.lolkey = 'ed78c137a46873c5b8e5fe3b'
+global.lolkey = '327a6596e4c4baa20c756132'
 /*Xteam*/
 global.xteamkey = 'HIRO'
 /*Xcoders*/
@@ -133,12 +133,14 @@ global.fpagedoc = '9'.repeat(3)
 /*Watermark*/
 global.lopr = '🅟'
 global.lolm = 'Ⓛ'
+global.cmenut = '❏═┅┅─『'
 global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
+global.htjava = '⫹⫺'
 global.packname = '𝗠𝗮𝗱𝗲 𝗕𝘆'
 global.stickpack = packname
 global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'
 global.stickauth = author + '\nwa.me/' + nomorbot
-global.multiplier = 10
+global.multiplier = 69
 
 /*Pesan*/
 global.eror = '*E R R O R*'

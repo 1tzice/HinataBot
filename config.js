@@ -133,9 +133,11 @@ global.fpagedoc = '9'.repeat(3)
 /*Watermark*/
 global.lopr = '🅟'
 global.lolm = 'Ⓛ'
-global.cmenut = '❏═┅┅─『'
+global.cmenut = '❏═┅─『'
+global.cmenuh = '』─┅═❏'
 global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
 global.htjava = '⫹⫺'
+global.emojis = '🔖'
 global.packname = '𝗠𝗮𝗱𝗲 𝗕𝘆'
 global.stickpack = packname
 global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'

@@ -89,7 +89,6 @@ wallpaper,
 wallpaperv2,
 wallpaperv3,
 wikipedia,
-writeVarInt,
 youtubedl,
 youtubedlv2,
 youtubedlv3,
@@ -502,10 +501,12 @@ case 'wikipedia':
 let res91 = await wikipedia(one ? one : null)
 throw res91
 break
+/*
 case 'writeVarInt':
 let res92 = await writeVarInt(one ? one : null)
 throw res92
 break
+*/
 case 'youtubedl':
 let res93 = await youtubedl(one ? one : null)
 throw res93

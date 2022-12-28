@@ -77,7 +77,6 @@ export async function before(m, { conn } ) {
 		global.dmenub = ini_kiri
 		global.dmenub2 = ini_kiri
 		global.dmenuf = ini_bawah
-		global.cmenut = ini_atas
 		global.cmenuh = ini_kanan
 		global.cmenub = ini_kiri
 		global.cmenuf = ini_bawah
@@ -85,7 +84,7 @@ export async function before(m, { conn } ) {
 		global.dashmenu = ini_titik + ' *D A S B O A R D* ' + ini_titik
 		global.htki = ini_atas
 		global.htka = ini_kanan
-		global.htjava = ini_titik
+		
 		
 		/* Thumbnail */
 		global.hwaifu = link_waifu

@@ -138,7 +138,7 @@ async function connectionUpdate(update) {
 console.log(chalk.yellow('Successfully connected by ' + author))
 }
   console.log(JSON.stringify(update, null, 4))
-  if (update.receivedPendingNotifications) return this.sendButton(nomorown + '@s.whatsapp.net', 'Bot Successfully Connected', author, null, [['MENU', '/menu']], null)
+  if (update.receivedPendingNotifications) return this.sendMessage(nomorown + '@s.whatsapp.net', { text: 'Bot Successfully Connected' })
 }
 
 process.on('uncaughtException', console.error)

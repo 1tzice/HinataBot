@@ -28,7 +28,7 @@ export async function before(m, { conn } ) {
 		let a_ = await fetch(gh + 'waifu.json')
 		let link_waifu = await a_.json()
 		let b_ = await fetch(gh + 'Mountain.json')
-		let c_ = await fetch(gh + 'GameWallp.json')
+		let c_ = await fetch(gh + 'boruto.json')
 		let link_game = await c_.json()
 		let d_ = await fetch(gh + 'cosplay.json')
 		let e_ = await fetch(gh + 'loli.json')
@@ -50,9 +50,10 @@ export async function before(m, { conn } ) {
 		
 	let sapa = ['ʜᴀɪ', 'ᴏʜᴀʏᴏ', 'ᴋʏᴀᴀ', 'ʜᴀʟᴏ', 'ɴʏᴀɴɴ'].getRandom()
 	let curr = ['IDR','RSD','USD'].getRandom()
+	let stc = await fs.readFileSync('./thumbnail.jpg')
 	let pp
-	try { pp = await(await conn.profilePictureUrl(who, 'image')) }
-	catch (e) { pp = o__.getRandom() }
+	try { pp = o__.getRandom() }
+	catch (e) { pp = stc }
 	
     /* jpegThumbnail */
     let _situm = await conn.resize(link_game.getRandom(), 300, 150)
@@ -74,9 +75,6 @@ export async function before(m, { conn } ) {
 		global.dmenub = ini_kiri
 		global.dmenub2 = ini_kiri
 		global.dmenuf = ini_bawah
-		global.cmenub = ini_kiri
-		global.cmenuf = ini_bawah
-		global.pmenus = ini_titik
 		global.dashmenu = ini_titik + ' *D A S B O A R D* ' + ini_titik
 		global.htki = ini_atas
 		global.htka = ini_kanan

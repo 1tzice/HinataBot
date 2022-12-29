@@ -100,7 +100,7 @@ switch (template) {
             case 'aesthetic':
             case 'anjing':
         let nsf = 'https://mfarels.my.id/api/' + args[0]
-        conn.sendButton(m.chat, args[0], 'Succes', nsf, [['Back', '.?']], m)
+        return conn.sendButton(m.chat, args[0], 'Succes', nsf, [['Back', '.?']], m)
             break
             case 'anime':
 case 'animedl1':
@@ -124,7 +124,7 @@ case 'ytsearch':
 let linkq = 'https://mfarels.my.id/api/' + args[0] + '?q=' + one
             let feq = await fetch(linkq)
         let nofeq = await feq.json()
-        if (!nofeq) conn.sendButton(m.chat, args[0], 'Succes', linkq, [['Back', '.?']], m)
+        if (!nofeq) return conn.sendButton(m.chat, args[0], 'Succes', linkq, [['Back', '.?']], m)
         else throw nofeq
             break
             case 'bahasa-g':
@@ -188,12 +188,12 @@ case 'ttp6':
 let linkt = 'https://mfarels.my.id/api/' + args[0] + '?text=' + one
             let fet = await fetch(linkt)
         let nofet = await fet.json()
-        if (!nofet) conn.sendButton(m.chat, args[0], 'Succes', linkt, [['Back', '.?']], m)
+        if (!nofet) return conn.sendButton(m.chat, args[0], 'Succes', linkt, [['Back', '.?']], m)
         else throw nofet
             break
 }
 }
-} catch {
+} catch (e) {
 throw 'Fitur Rusak'
 }
 }

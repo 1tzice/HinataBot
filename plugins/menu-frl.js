@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-let handler = async(m, { conn, text, args, usedPrefix, command }) => {
+let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 let urut = text.split`|`
   let one = urut[1]
   let two = urut[2]
@@ -122,10 +122,10 @@ case 'stickersearch':
 case 'wikipedia':
 case 'ytsearch':
 let linkq = 'https://mfarels.my.id/api/' + args[0] + '?q=' + one
-            let a1 = await fetch(linkq)
-        let 1a = await a1.json()
-        if (!1a) conn.sendButton(m.chat, args[0], 'Succes', linkq, [['Back', '.?']], m)
-        else throw 1a
+            let feq = await fetch(linkq)
+        let nofeq = await feq.json()
+        if (!nofeq) conn.sendButton(m.chat, args[0], 'Succes', linkq, [['Back', '.?']], m)
+        else throw nofeq
             break
             case 'bahasa-g':
 case 'bajinganlo':
@@ -186,19 +186,18 @@ case 'ttp4':
 case 'ttp5':
 case 'ttp6':
 let linkt = 'https://mfarels.my.id/api/' + args[0] + '?text=' + one
-            let a2 = await fetch(linkt)
-        let 2a = await a2.json()
-        if (!2a) conn.sendButton(m.chat, args[0], 'Succes', linkt, [['Back', '.?']], m)
-        else throw 2a
+            let fet = await fetch(linkt)
+        let nofet = await fet.json()
+        if (!nofet) conn.sendButton(m.chat, args[0], 'Succes', linkt, [['Back', '.?']], m)
+        else throw nofet
             break
 }
 }
-} catch (e) {
+} catch {
 throw 'Fitur Rusak'
 }
 }
-handler.help = ['frl']
-handler.tags = ['info']
-handler.command = ['frl']
+handler.help = ['frl <command> <teks>']
+handler.tags = ['tools'] 
+handler.command = /^frl$/i
 export default handler
-

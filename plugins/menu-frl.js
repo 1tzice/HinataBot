@@ -1,15 +1,12 @@
-import axios from 'axios'
 import fetch from 'node-fetch'
 
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
-
 let urut = text.split`|`
   let one = urut[1]
   let two = urut[2]
   let three = urut[3]
   
 let template = (args[0] || '').toLowerCase()
-if (!args[0] || !one) {
 let caption = `*Contoh Penggunaan Single*
 ${usedPrefix + command} cecan
 
@@ -95,16 +92,15 @@ ${usedPrefix + command} pinterest |wibu
 • ${usedPrefix + command} wikipedia
 • ${usedPrefix + command} ytsearch
 `
-throw caption
-	}
-            
+
+if (!args[0] || !one) throw caption
 try {
 if (command) {
 switch (template) {
             case 'aesthetic':
             case 'anjing':
-        let nsf = `https://mfarels.my.id/api/${args[0]}`
-        conn.sendButton(m.chat, wm, wm, nsf, [['To Sticker', '.s']], m)
+        let nsf = 'https://mfarels.my.id/api/' + args[0]
+        conn.sendButton(m.chat, args[0], 'Succes', nsf, [['Back', '.?']], m)
             break
             case 'anime':
 case 'animedl1':
@@ -125,11 +121,11 @@ case 'ringtone':
 case 'stickersearch':
 case 'wikipedia':
 case 'ytsearch':
-let linkq = `https://mfarels.my.id/api/${args[0]}?q=${one}`
+let linkq = 'https://mfarels.my.id/api/' + args[0] + '?q=' + one
             let a1 = await fetch(linkq)
         let 1a = await a1.json()
-        if (1a) throw JSON.parse(1a)
-        else conn.sendButton(m.chat, args[0], 'Succes', linkq, [['Back', '.?']], m)
+        if (!1a) conn.sendButton(m.chat, args[0], 'Succes', linkq, [['Back', '.?']], m)
+        else throw 1a
             break
             case 'bahasa-g':
 case 'bajinganlo':
@@ -189,20 +185,20 @@ case 'ttp3':
 case 'ttp4':
 case 'ttp5':
 case 'ttp6':
-let linkt = `https://mfarels.my.id/api/${args[0]}?text=${one}`
+let linkt = 'https://mfarels.my.id/api/' + args[0] + '?text=' + one
             let a2 = await fetch(linkt)
         let 2a = await a2.json()
-        if (2a) throw JSON.parse(2a)
-        else conn.sendButton(m.chat, args[0], 'Succes', linkt, [['Back', '.?']], m)
+        if (!2a) conn.sendButton(m.chat, args[0], 'Succes', linkt, [['Back', '.?']], m)
+        else throw 2a
             break
 }
 }
 } catch (e) {
-throw eror
+throw 'Fitur Rusak'
 }
 }
 handler.help = ['frl']
-handler.tags = ['tools'] 
-handler.command = /^frl$/i
+handler.tags = ['info']
+handler.command = ['frl']
 export default handler
 

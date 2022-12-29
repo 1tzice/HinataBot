@@ -11,7 +11,7 @@ export async function before(m, { match, usedPrefix, command }) {
 		let sim = similarity(noPrefix, mean)
 		let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 		let name = await conn.getName(who)
-		let caption = `👋 Hai ${name} @${who.split("@")[0]}, Apakah yang kamu maksud: *${usedPrefix + mean.substring(0, mean.indexOf(" "))}*\nSimilarity: *${Number(sim * 100).toFixed(2)}%*`
+		let caption = `👋 Hai ${name} @${who.split("@")[0]}, Apakah yang kamu maksud: *${usedPrefix + mean}*\nSimilarity: *${Number(sim * 100).toFixed(2)}%*`
 	if (mean) this.sendButton(m.chat, caption, wm, null, [['✅ Iya', `${usedPrefix + mean} ${text}`], ['❌ Bukan', usedPrefix + '?']], m, { mentions: this.parseMention(caption) })
 	}
 }

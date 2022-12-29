@@ -50,10 +50,9 @@ export async function before(m, { conn } ) {
 		
 	let sapa = ['ʜᴀɪ', 'ᴏʜᴀʏᴏ', 'ᴋʏᴀᴀ', 'ʜᴀʟᴏ', 'ɴʏᴀɴɴ'].getRandom()
 	let curr = ['IDR','RSD','USD'].getRandom()
-	let stc = await fs.readFileSync('./thumbnail.jpg')
 	let pp
 	try { pp = o__.getRandom() }
-	catch (e) { pp = stc }
+	catch (e) { pp = 'https://cerdasin.netlify.app/img/wudysoft.jpg' }
 	
     /* jpegThumbnail */
     let _situm = await conn.resize(link_game.getRandom(), 300, 150)

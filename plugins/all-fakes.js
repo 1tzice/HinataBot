@@ -3,13 +3,13 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 import knights from 'knights-canvas'
-export async function before(m, { conn } ) {
+export async function before(m) {
 /* Siapa */
 	let who
-	try { who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender }
-		catch (e) { who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net' }
+	try { who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender }
+		catch (e) { who = m.sender ? m.sender : this.user.jid && this.user.jid ? this.user.jid : '0@s.whatsapp.net' }
 /* Namanya */
-	let name = await conn.getName(who)
+	let name = await this.getName(who)
 	
 /* Hiasan */
 		let ini_kotak = ['⛶','❏','⫹⫺','☰','⎔','✦','⭔','⬟','⛊','⚝'].getRandom()
@@ -28,7 +28,7 @@ export async function before(m, { conn } ) {
 		let a_ = await fetch(gh + 'waifu.json')
 		let link_waifu = await a_.json()
 		let b_ = await fetch(gh + 'Mountain.json')
-		let c_ = await fetch(gh + 'GameWallp.json')
+		let c_ = await fetch(gh + 'boruto.json')
 		let link_game = await c_.json()
 		let d_ = await fetch(gh + 'cosplay.json')
 		let e_ = await fetch(gh + 'loli.json')
@@ -51,12 +51,12 @@ export async function before(m, { conn } ) {
 	let sapa = ['ʜᴀɪ', 'ᴏʜᴀʏᴏ', 'ᴋʏᴀᴀ', 'ʜᴀʟᴏ', 'ɴʏᴀɴɴ'].getRandom()
 	let curr = ['IDR','RSD','USD'].getRandom()
 	let pp
-	try { pp = await conn.profilePictureUrl(who, 'image') }
-	catch (e) { pp = o__.getRandom() }
+	try { pp = o__.getRandom() }
+	catch { pp = await fs.readFileSync('./thumbnail.jpg') }
 	
     /* jpegThumbnail */
-    let _situm = await conn.resize(link_game.getRandom(), 300, 150)
-    let sipp = await conn.resize(pp, 150, 150)
+    let _situm = await this.resize(link_game.getRandom(), 300, 150)
+    let sipp = await this.resize(pp, 150, 150)
     
     /* Fake Knights */
 		let imagea = await new knights.Jo().setImage(pp).toBuild();

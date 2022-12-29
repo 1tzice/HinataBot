@@ -3,13 +3,13 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 import knights from 'knights-canvas'
-export async function before(m, { conn } ) {
+export async function all(m) {
 /* Siapa */
 	let who
-	try { who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender }
-		catch (e) { who = m.sender ? m.sender : conn.user.jid && conn.user.jid ? conn.user.jid : '0@s.whatsapp.net' }
+	try { who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender }
+		catch (e) { who = m.sender ? m.sender : this.user.jid && this.user.jid ? this.user.jid : '0@s.whatsapp.net' }
 /* Namanya */
-	let name = await conn.getName(who)
+	let name = await this.getName(who)
 	
 /* Hiasan */
 		let ini_kotak = ['⛶','❏','⫹⫺','☰','⎔','✦','⭔','⬟','⛊','⚝'].getRandom()
@@ -55,8 +55,8 @@ export async function before(m, { conn } ) {
 	catch (e) { pp = 'https://cerdasin.netlify.app/img/wudysoft.jpg' }
 	
     /* jpegThumbnail */
-    let _situm = await conn.resize(link_game.getRandom(), 300, 150)
-    let sipp = await conn.resize(pp, 150, 150)
+    let _situm = await this.resize(link_game.getRandom(), 300, 150)
+    let sipp = await this.resize(pp, 150, 150)
     
     /* Fake Knights */
 		let imagea = await new knights.Jo().setImage(pp).toBuild();
@@ -69,136 +69,7 @@ export async function before(m, { conn } ) {
 		let datad = imaged.toBuffer();
 		let _kn = [dataa, datab, datac, datad].getRandom()
 		
-		/* Hiasan */
-		global.dmenut = ini_atas
-		global.dmenub = ini_kiri
-		global.dmenub2 = ini_kiri
-		global.dmenuf = ini_bawah
-		global.dashmenu = ini_titik + ' *D A S B O A R D* ' + ini_titik
-		global.htki = ini_atas
-		global.htka = ini_kanan
-		
-		
-		/* Thumbnail */
-		global.hwaifu = link_waifu
-		global.hbeach = await b_.json()
-		global.thumbnailUrl = link_game
-		global.hoppai = await d_.json()
-		global.hloli = await e_.json()
-		global.hyuri = await f_.json()
-		global.hneko = await g_.json()
-		global.hLokun = await h_.json()
-		global.hbunny = await i_.json()
-		global.thumbs = await j_.json()
-		global.thumb = k__.getRandom()
-		global.imagebot = l__.getRandom()
-		global.thumbdoc = n__.getRandom()
-		global.logo = m__.getRandom()
-		
-		/* Begin */
-		global.ucapan = ucapkan()
-		global.ephemeral = '86400'
-		
-		/* Fake adReply */
-		global.adReplyS = {
-		fileLength: fsizedoc, seconds: fsizedoc,
-			contextInfo: {
-				forwardingScore: fsizedoc,
-				externalAdReply: {
-						showAdAttribution: true,
-						title: author,
-						body: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
-						mediaUrl: sgc,
-						description: botdate,
-						previewType: 'PHOTO',
-						thumbnail: await(await fetch(pp)).buffer(),
-						sourceUrl: sgh
-				}
-			}
-		}
-		global.adReply = {
-		fileLength: fsizedoc, seconds: fsizedoc,
-			contextInfo: {
-				forwardingScore: fsizedoc,
-				externalAdReply: {
-						body: botdate,
-						containsAutoReply: true,
-						mediaType: 1,
-						mediaUrl: sgc,
-						renderLargerThumbnail: true,
-						showAdAttribution: true,
-						sourceId: author,
-						sourceType: 'PDF',
-						previewType: 'PDF',
-						sourceUrl: sgc,
-						thumbnail: await(await fetch(pp)).buffer(),
-						thumbnailUrl: pp,
-						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name
-				}
-			}
-		}
-		global.fakeig = {
-		fileLength: fsizedoc, seconds: fsizedoc,
-				contextInfo: {
-					externalAdReply: {
-						showAdAttribution: true,
-						mediaUrl: sig,
-						mediaType: 'VIDEO',
-						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sig,
-						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
-						body: botdate,
-						thumbnailUrl: pp,
-						sourceUrl: sgc
-					}
-				}
-			}
-			global.fakefb = {
-			fileLength: fsizedoc, seconds: fsizedoc,
-				contextInfo: {
-					externalAdReply: {
-						showAdAttribution: true,
-						mediaUrl: sfb,
-						mediaType: 'VIDEO',
-						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sfb,
-						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
-						body: botdate,
-						thumbnailUrl: pp,
-						sourceUrl: sfb
-					}
-				}
-			}
-			global.faketik = {
-			fileLength: fsizedoc, seconds: fsizedoc,
-				contextInfo: {
-					externalAdReply: {
-						showAdAttribution: true,
-						mediaUrl: snh,
-						mediaType: 'VIDEO',
-						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + snh,
-						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
-						body: botdate,
-						thumbnailUrl: pp,
-						sourceUrl: snh
-					}
-				}
-			}
-			global.fakeyt = {
-			fileLength: fsizedoc, seconds: fsizedoc,
-				contextInfo: {
-					externalAdReply: {
-						showAdAttribution: true,
-						mediaUrl: syt,
-						mediaType: 'VIDEO',
-						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + syt,
-						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
-						body: botdate,
-						thumbnailUrl: pp,
-						sourceUrl: syt
-					}
-				}
-			}
-			
-			/* Fake Reply */
+		/* Fake Reply */
 		let fpayment = {
 				key: {
 					participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast'
@@ -362,6 +233,136 @@ export async function before(m, { conn } ) {
 		let _pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'].getRandom()
 		let _pft = [fdocs, fgif, fkontak, fliveLoc, fpayment, fpoll, ftextt, ftoko, ftroli, fvid, fvn].getRandom()
 		
+		finally {
+		/* Hiasan */
+		global.dmenut = ini_atas
+		global.dmenub = ini_kiri
+		global.dmenub2 = ini_kiri
+		global.dmenuf = ini_bawah
+		global.dashmenu = ini_titik + ' *D A S B O A R D* ' + ini_titik
+		global.htki = ini_atas
+		global.htka = ini_kanan
+		
+		
+		/* Thumbnail */
+		global.hwaifu = link_waifu
+		global.hbeach = await b_.json()
+		global.thumbnailUrl = link_game
+		global.hoppai = await d_.json()
+		global.hloli = await e_.json()
+		global.hyuri = await f_.json()
+		global.hneko = await g_.json()
+		global.hLokun = await h_.json()
+		global.hbunny = await i_.json()
+		global.thumbs = await j_.json()
+		global.thumb = k__.getRandom()
+		global.imagebot = l__.getRandom()
+		global.thumbdoc = n__.getRandom()
+		global.logo = m__.getRandom()
+		
+		/* Begin */
+		global.ucapan = ucapkan()
+		global.ephemeral = '86400'
+		
+		/* Fake adReply */
+		global.adReplyS = {
+		fileLength: fsizedoc, seconds: fsizedoc,
+			contextInfo: {
+				forwardingScore: fsizedoc,
+				externalAdReply: {
+						showAdAttribution: true,
+						title: author,
+						body: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
+						mediaUrl: sgc,
+						description: botdate,
+						previewType: 'PHOTO',
+						thumbnail: await(await fetch(pp)).buffer(),
+						sourceUrl: sgh
+				}
+			}
+		}
+		global.adReply = {
+		fileLength: fsizedoc, seconds: fsizedoc,
+			contextInfo: {
+				forwardingScore: fsizedoc,
+				externalAdReply: {
+						body: botdate,
+						containsAutoReply: true,
+						mediaType: 1,
+						mediaUrl: sgc,
+						renderLargerThumbnail: true,
+						showAdAttribution: true,
+						sourceId: author,
+						sourceType: 'PDF',
+						previewType: 'PDF',
+						sourceUrl: sgc,
+						thumbnail: await(await fetch(pp)).buffer(),
+						thumbnailUrl: pp,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name
+				}
+			}
+		}
+		global.fakeig = {
+		fileLength: fsizedoc, seconds: fsizedoc,
+				contextInfo: {
+					externalAdReply: {
+						showAdAttribution: true,
+						mediaUrl: sig,
+						mediaType: 'VIDEO',
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sig,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
+						body: botdate,
+						thumbnailUrl: pp,
+						sourceUrl: sgc
+					}
+				}
+			}
+			global.fakefb = {
+			fileLength: fsizedoc, seconds: fsizedoc,
+				contextInfo: {
+					externalAdReply: {
+						showAdAttribution: true,
+						mediaUrl: sfb,
+						mediaType: 'VIDEO',
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + sfb,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
+						body: botdate,
+						thumbnailUrl: pp,
+						sourceUrl: sfb
+					}
+				}
+			}
+			global.faketik = {
+			fileLength: fsizedoc, seconds: fsizedoc,
+				contextInfo: {
+					externalAdReply: {
+						showAdAttribution: true,
+						mediaUrl: snh,
+						mediaType: 'VIDEO',
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + snh,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
+						body: botdate,
+						thumbnailUrl: pp,
+						sourceUrl: snh
+					}
+				}
+			}
+			global.fakeyt = {
+			fileLength: fsizedoc, seconds: fsizedoc,
+				contextInfo: {
+					externalAdReply: {
+						showAdAttribution: true,
+						mediaUrl: syt,
+						mediaType: 'VIDEO',
+						description: '𝗙𝗼𝗹𝗹𝗼𝘄: ' + syt,
+						title: '👋 ' + sapa + ' ᴋᴀᴋ :3 ' + name,
+						body: botdate,
+						thumbnailUrl: pp,
+						sourceUrl: syt
+					}
+				}
+			}
+			
 		/* Global Fake */
 		global.doc = _pdoc
 		global.fakes = _pft
@@ -369,6 +370,7 @@ export async function before(m, { conn } ) {
 		global.tumhiho = _situm
 		
 		/* Ends */
+		}
 }
 
 function ucapkan() {

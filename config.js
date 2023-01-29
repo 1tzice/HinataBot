@@ -6,8 +6,8 @@ import moment from 'moment-timezone'
 
 /*Oᴡɴᴇʀ number*/
 global.owner = [
-  ['6282195322106'],
-  ['6282195322106', '️OWNER - HINATA', true]
+  ['62895804749060'],
+  ['6287829418915', '️OWNER - hxicon', true]
 ]
 global.mods = []
 global.prems = []
@@ -89,9 +89,9 @@ global.namebot = 'ʜɪɴᴀᴛᴀ-ʙᴏᴛ'
 global.nameown = '「 Oᴡɴᴇʀ 」'
 
 /*Watermark*/
-global.wm = '                「 ʜɪɴᴀᴛᴀ-ʙᴏᴛ あ⁩ 」'
+global.wm = '                「 hxicon あ⁩ 」'
 global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘օառɛʀ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ ʜɪɴᴀᴛᴀ-ʙᴏᴛ'
+global.wm3 = '⫹⫺ hxicon'
 global.botdate = `⫹⫺ Date :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`
 global.titlebot = `⫹⫺ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\n⫹⫺ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
@@ -143,7 +143,7 @@ global.htjava = '⫹⫺'
 global.emojis = '🔖'
 global.packname = '𝗠𝗮𝗱𝗲 𝗕𝘆'
 global.stickpack = packname
-global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'
+global.author = 'yzwony'
 global.stickauth = author + '\nwa.me/' + nomorbot
 global.multiplier = 69
 
@@ -152,21 +152,21 @@ global.eror = '*E R R O R*'
 global.wait = '*W A I T*'
 global.render = '*R E N D E R*'
 global.webs = 'https://s.id/Cerdasin62'
-global.gcwangsaf = 'https://chat.whatsapp.com/Fxz8FpQ0ddr2GrEjfYkJ1E'
+global.gcwangsaf = '-'
 
 /*Donasi*/
-global.saweria = 'https://saweria.com/wudysoft'
-global.dana = '0887435373103'
-global.pulsa = '082195322106'
+global.saweria = '-'
+global.dana = '087829418915'
+global.pulsa = '0895804749060'
 global.trakteer = 'https://trakteer.id/wudysoft'
 global.paypal = 'wudysoft@mail.com'
-global.gopay = '082195322106'
-global.pdana = '0887435373103'
-global.povo = '082195322106'
-global.pgopay = '082195322106'
-global.ppulsa = '082195322106'
-global.ppulsa2 = '082195322106'
-global.psaweria = 'https://saweria.com/Wudysoft'
+global.gopay = '087829418915'
+global.pdana = '087829418915'
+global.povo = '-'
+global.pgopay = '087829418915'
+global.ppulsa = '087829418915'
+global.ppulsa2 = '0895804749060'
+global.psaweria = '-'
 
 /*Emoji*/
 global.rpg = {
